@@ -29,6 +29,7 @@ class Chat extends Component {
     async componentDidMount() {
         console.tron.log(this.props.state);
         try {
+            //Utilizei esse endereço porque o que foi dado no teste não permitia requisições de origens desconhecidas.
             const socket = await io("ws://socketio-echo.herokuapp.com", {
                 transports: ["websocket"],
                 timeout: 3000
